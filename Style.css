@@ -1,0 +1,127 @@
+/* style.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título principal com efeito neon */
+h1 {
+    color: #ff0000;
+    text-shadow: 0 0 10px red, 0 0 30px red;
+    animation: neon 1.5s infinite alternate;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+@keyframes neon {
+    from { text-shadow: 0 0 10px red; }
+    to { text-shadow: 0 0 30px red; }
+}
+
+/* Caixa padrão */
+.box {
+    background-color: #111;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+    animation: borda 2s infinite alternate;
+}
+
+@keyframes borda {
+    from { box-shadow: 0 0 5px red; }
+    to { box-shadow: 0 0 25px red; }
+}
+
+/* Botões */
+button {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
+/* Inputs */
+input[type="password"], input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* Resultado gerado */
+#resultado {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid red;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+/* Informações do dispositivo */
+#info {
+    font-size: 0.95em;
+}
+
+/* Perfil escolhido */
+#perfilEscolhido {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Armas */
+#armas {
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+/* Scroll personalizado */
+#resultado::-webkit-scrollbar {
+    width: 6px;
+}
+
+#resultado::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 3px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 400px) {
+    .box {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    input[type="password"], input[type="text"] {
+        width: 95%;
+    }
+}
