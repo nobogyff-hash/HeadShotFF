@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma de Sensibilidade Free Fire</title>
+<style>
+  /* === Cores e tema Neo Vermelho === */
+  :root {
+    --bg-color: #0d0d0d;
+    --accent-color: #ff073a;
+    --highlight-color: #ff4c6d;
+    --text-color: #ffffff;
+    --shadow-color: #ff073a;
+  }
+
+  /* === Reset básico === */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid var(--accent-color);
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--highlight-color), 0 0 20px var(--highlight-color);
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: var(--highlight-color);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    border-left: 5px solid var(--highlight-color);
+    padding-left: 10px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px var(--highlight-color);
+  }
+
+  .features, .sensitivity-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .feature-card, .sensitivity-card {
+    flex: 1 1 280px;
+    background-color: #1a1a1a;
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* efeito neon pulsante */
+  .feature-card::before, .sensitivity-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, var(--highlight-color), var(--accent-color), var(--highlight-color));
+    transform: rotate(0deg);
+    transition: all 0.5s;
+    opacity: 0.2;
+    z-index: 0;
+    animation: rotate-neon 6s linear infinite;
+  }
+
+  @keyframes rotate-neon {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+
+  .feature-card h3, .sensitivity-card h3 {
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .feature-card p, .sensitivity-card p {
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+  }
+
+  .feature-card:hover, .sensitivity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px var(--highlight-color), 0 0 40px var(--accent-color);
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+    text-align: center;
+    box-shadow: 0 0 10px var(--accent-color);
+  }
+
+  .btn:hover {
+    background-color: var(--highlight-color);
+    box-shadow: 0 0 20px var(--highlight-color), 0 0 40px var(--accent-color);
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #111;
+    border-top: 4px solid var(--accent-color);
+    color: var(--highlight-color);
+    text-shadow: 0 0 5px var(--highlight-color);
+  }
+
+  @media(max-width: 768px) {
+    .features, .sensitivity-table {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Plataforma de Sensibilidade Free Fire</h1>
+  <p>Controle total da mira | 100% Headshot | Tema Neo Vermelho</p>
+</header>
+
+<div class="container">
+
+  <!-- Seção Features -->
+  <section class="features section">
+    <h2>Por que escolher nossa plataforma?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Sistema Inteligente</h3>
+        <p>Aprende seu estilo de jogo e ajusta a sensibilidade automaticamente.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Detecção Automática</h3>
+        <p>Identifica seu dispositivo e modelo, oferecendo configurações perfeitas para Android ou iOS.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Totalmente Responsivo</h3>
+        <p>Funciona em qualquer celular, com interface organizada e intuitiva.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Segurança Exclusiva</h3>
+        <p>Acesso protegido com senha exclusiva <strong>RKS2026</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sensibilidade -->
+  <section class="sensitivity section">
+    <h2>Ajustes de Sensibilidade Otimizados</h2>
+    <div class="sensitivity-table">
+      <div class="sensitivity-card">
+        <h3>Sensibilidade Geral</h3>
+        <p>180–200</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>Red Dot</h3>
+        <p>180</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>Mira 2x</h3>
+        <p>170</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>Mira 4x</h3>
+        <p>160</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>AWM</h3>
+        <p>150</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>DPI</h3>
+        <p>400–600</p>
+      </div>
+      <div class="sensitivity-card">
+        <h3>Sensibilidade Personalizada</h3>
+        <p>Acima de 100 – máxima performance</p>
+      </div>
+    </div>
+    <a href="#" class="btn">Aplicar Configurações</a>
+  </section>
+
+</div>
+
+<footer>
+  Plataforma Neo Vermelho – Precisão e Controle Total da Mira 🎯
+</footer>
+
+</body>
+</html>
