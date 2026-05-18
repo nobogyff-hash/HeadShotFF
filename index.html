@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prime Tech</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div>
+      <h1>Prime Tech</h1>
+      <p>Sistema de Assistência Técnica</p>
+    </div>
+
+    <button class="btn">+ Nova Ordem</button>
+  </header>
+
+  <section class="cards">
+
+    <div class="card">
+      <h2>28</h2>
+      <span>Total de aparelhos</span>
+    </div>
+
+    <div class="card">
+      <h2>10</h2>
+      <span>Em análise</span>
+    </div>
+
+    <div class="card">
+      <h2>6</h2>
+      <span>Em reparo</span>
+    </div>
+
+    <div class="card">
+      <h2>12</h2>
+      <span>Concluídos</span>
+    </div>
+
+  </section>
+
+  <section class="formulario">
+
+    <h2>Nova Ordem de Serviço</h2>
+
+    <div class="grid">
+
+      <input type="text" placeholder="Nome do cliente">
+      <input type="text" placeholder="Telefone">
+
+      <input type="text" placeholder="Modelo do aparelho">
+      <input type="text" placeholder="IMEI">
+
+      <input type="text" placeholder="Senha / padrão">
+
+      <select>
+        <option>Status</option>
+        <option>Em análise</option>
+        <option>Em reparo</option>
+        <option>Concluído</option>
+      </select>
+
+    </div>
+
+    <textarea placeholder="Defeito relatado"></textarea>
+
+    <div class="checks">
+
+      <label><input type="checkbox"> Tela quebrada</label>
+      <label><input type="checkbox"> Não liga</label>
+      <label><input type="checkbox"> Molhado</label>
+      <label><input type="checkbox"> Sem chip</label>
+
+    </div>
+
+    <div class="grid">
+
+      <input type="text" placeholder="Valor do serviço">
+      <input type="text" placeholder="Sinal pago">
+
+      <button class="btn salvar">
+        Salvar Ordem
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="lista">
+
+    <div class="titulo-lista">
+      <h2>Aparelhos cadastrados</h2>
+
+      <input type="text" placeholder="Pesquisar aparelho">
+    </div>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>OS</th>
+          <th>Cliente</th>
+          <th>Aparelho</th>
+          <th>Defeito</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabela">
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
