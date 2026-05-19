@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Tech</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+
+    <div>
+      <h1>Prime Tech</h1>
+      <p>Sistema de Assistência Técnica</p>
+    </div>
+
+    <button onclick="window.print()" class="btn">
+      Imprimir
+    </button>
+
+  </header>
+
+  <section class="cards">
+
+    <div class="card">
+      <h2 id="total">0</h2>
+      <span>Total</span>
+    </div>
+
+    <div class="card">
+      <h2 id="analise">0</h2>
+      <span>Em análise</span>
+    </div>
+
+    <div class="card">
+      <h2 id="reparo">0</h2>
+      <span>Em reparo</span>
+    </div>
+
+    <div class="card">
+      <h2 id="concluido">0</h2>
+      <span>Concluídos</span>
+    </div>
+
+  </section>
+
+  <section class="formulario">
+
+    <h2>Nova Ordem de Serviço</h2>
+
+    <div class="grid">
+
+      <input type="text" id="nome" placeholder="Nome do cliente">
+
+      <input type="text" id="telefone" placeholder="Telefone">
+
+      <input type="text" id="modelo" placeholder="Modelo do aparelho">
+
+      <input type="text" id="imei" placeholder="IMEI">
+
+      <input type="text" id="senha" placeholder="Senha / padrão">
+
+      <select id="status">
+        <option>Em análise</option>
+        <option>Em reparo</option>
+        <option>Concluído</option>
+      </select>
+
+    </div>
+
+    <textarea id="defeito" placeholder="Defeito relatado"></textarea>
+
+    <div class="grid">
+
+      <input type="text" id="valor" placeholder="Valor">
+
+      <input type="text" id="pagamento" placeholder="Forma de pagamento">
+
+    </div>
+
+    <div class="grid">
+
+      <input type="date" id="entrada">
+
+      <input type="date" id="saida">
+
+    </div>
+
+    <textarea id="observacoes" placeholder="Observações"></textarea>
+
+    <div class="grid">
+
+      <button class="btn salvar">
+        Salvar Ordem
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="lista">
+
+    <div class="titulo">
+
+      <h2>Aparelhos cadastrados</h2>
+
+      <input type="text" id="pesquisa" placeholder="Pesquisar aparelho">
+
+    </div>
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>OS</th>
+          <th>Cliente</th>
+          <th>Aparelho</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="tabela">
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <section class="garantia">
+
+    <h2>Termos de Garantia</h2>
+
+    <p>
+      1. A garantia cobre somente o serviço realizado pela assistência técnica.
+    </p>
+
+    <p>
+      2. A garantia perde validade em casos de queda, oxidação, mau uso ou violação do aparelho.
+    </p>
+
+    <p>
+      3. O prazo da garantia é de 90 dias para serviços executados.
+    </p>
+
+    <p>
+      4. Aparelhos não retirados em até 90 dias poderão gerar taxa de armazenamento.
+    </p>
+
+    <div class="assinaturas">
+
+      <div>
+        ___________________________
+        <br>
+        Assinatura do Cliente
+      </div>
+
+      <div>
+        ___________________________
+        <br>
+        Assinatura da Loja
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
